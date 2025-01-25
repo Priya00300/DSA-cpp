@@ -34,6 +34,9 @@ void bubblesort(int arr[],int n){
     if(didswap==0){
       break;
     }  
+    //we can remove run as i havae put it here so that we can see how many tim es it loops and in the best case O(n) which is when the array is already sorted
+  }
+}
     cout<<"runs\n";
   
     
