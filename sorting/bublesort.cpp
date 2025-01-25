@@ -35,6 +35,9 @@ void bubblesort(int arr[],int n){
       break;
     }  
     //we can remove run as i havae put it here so that we can see how many tim es it loops and in the best case O(n) which is when the array is already sorted
+    //worst case O(n^2)
+  }
+}
   }
 }
     cout<<"runs\n";
