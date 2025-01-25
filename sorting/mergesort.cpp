@@ -37,9 +37,13 @@
 //;ets take - 
 //3|2|4|1|3
 //0|1|2|3|4<--index
+//low|....|high
 //we have to use recurssion and back tracking
 //we will find a middle index low+high/2
-//so that we can divide it
+//so that we can divide it in two parts
+//mergesort(arr,low,high){ mid =(low+high)/2)
+//mergesort(arr,low,mid)
+//}
 
 #include<iostream>  
 using namespace std;
