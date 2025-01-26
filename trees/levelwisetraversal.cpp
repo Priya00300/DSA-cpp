@@ -1,33 +1,37 @@
 #include<iostream>
-#innclude<vector>
+#include<vector>
+#include <queue>
 using namespace std;
 
 struct Node{
 int val;
 Node* left;
 Node* right;
-Node(int val) : val(val), left(nullptr),
-}
+Node(int val) : val(val), left(nullptr), right(nullptr) {}
+};
 
 class solution{
 public:
-vector<vector<int>> LevelOrder(Node* root)
+vector<vector<int>> LevelOrder(Node* root){
  vector<vector<int>> ans;
  if(root==nullptr)
-    return 0;
+    return ans;
+  queue <Node*> q;
+  q.push(root);
 
-while(!q.empty){
+while(!q.empty()){
   int size = q.size();
   vector<int> level;
-  for(int i=0;i<size;i++)
+  for(int i=0;i<size;i++){
     Node* node = q.front();
-  q.pop;
+  q.pop();
   level.push_back(node->val);
-  if(node->left!=NULL)=q.push(node->left);
-  if(node->right!=NULL)=q.push(node->right);
+  if(node->left!=NULL) q.push(node->left);
+  if(node->right!=NULL) q.push(node->right);
 }
 ans.push_back(level);
 }
+return ans;}};
 
 int main(){
   Node* root = new Node(1);
@@ -38,7 +42,14 @@ int main(){
   root->right->left = new Node(6);
   root->right->right = new Node(7);
 
-  Solution solution;
+  solution solution;
   vector<vector<int>> result = solution.LevelOrder(root);
+   cout << "Level Order Traversal:" << endl;
+  for(const auto& level : result){
+    for(int val : level){
+      cout << val << " ";
+    }
+    cout<<endl;
+  }
   return 0;
 }
