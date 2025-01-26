@@ -27,7 +27,7 @@ int val;
 Treenode *left;
 Treenode *right;
 Treenode(int val) : val(val), left(nullptr), right(nullptr) {}
-}
+};
 
 int maxdepth(Treenode* root){
   if(root==nullptr) return 0;
@@ -36,7 +36,7 @@ int maxdepth(Treenode* root){
   int rightdepth = maxdepth(root->right);
 
   return 1+max(leftdepth,rightdepth);
-}
+};
 
 int main(){
   Treenode* root = new Treenode(1);
