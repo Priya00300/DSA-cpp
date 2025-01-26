@@ -10,23 +10,24 @@ int data;
 Node* left;
 Node* right;
 Node(int val) : data(val), left(nullptr), right(nullptr) {}
-}
+};
+
 class solution {
 public:
 int maxpathsum(Node* root){
   int globalmax = INT_MIN;
-  int maxgain(Node* root,int &globalmax);
-  retrun globalmax;
+  maxgain(root,globalmax);
+  return globalmax;
 }
 private:
 int maxgain(Node* root,int &globalmax){
   if(root==nullptr) return 0;
 
-  int leftmaxx = max(maxgain(root->left,globalmax));
-  int rightmaxx = max(maxgain(root->right,globalmax));
+  int leftmaxx = max(maxgain(root->left,globalmax),0);
+  int rightmaxx = max(maxgain(root->right,globalmax),0);
   int currentpathsum = root->data + leftmaxx + rightmaxx;
   globalmax = max(globalmax,currentpathsum);
-  return node->data +max(leftmaxx,rightmaxx);
+  return root->data +max(leftmaxx,rightmaxx);
   
 }
 
@@ -39,6 +40,7 @@ int main(){
   root->left->right = new Node(5);
   root->right->left = new Node(6);
   root->right->right = new Node(7);
-  cout << "Maximum Path Sum: " << maxpathsum(root);
+  solution sol;
+  cout << "Maximum Path Sum: " << sol.maxpathsum(root);
   return 0;
 }
