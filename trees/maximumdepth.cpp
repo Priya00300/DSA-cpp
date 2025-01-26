@@ -26,5 +26,25 @@ struct Treenode{
 int val;
 Treenode *left;
 Treenode *right;
+Treenode(int val) : val(val), left(nullptr), right(nullptr) {}
+}
+
+int maxdepth(Treenode* root){
+  if(root==nullptr) return 0;
+
+  int leftdepth = maxdepth(root->left);
+  int rightdepth = maxdepth(root->right);
+
+  return 1+max(leftdepth,rightdepth);
+}
+
+int main(){
+  Treenode* root = new Treenode(1);
+  root->left = new Treenode(2);
+  root->right = new Treenode(3);
+  root->left->left = new Treenode(4);
+  root->left->right = new Treenode(5);
+  cout << "Maximum Depth: " << maxdepth(root);
+  return 0;
 }
   
