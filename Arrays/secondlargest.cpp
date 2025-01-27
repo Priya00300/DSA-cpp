@@ -2,22 +2,26 @@
 
 #include <iostream>
 using namespace std;
-void largest(int arr[],int n){
+int largest(int arr[],int n){
   int max=arr[0];
   for(int i=0;i<n;i++){
     if( arr[i]>max){
     max=arr[i];
-  }}} 
+  }
+  
+  }return  max;} 
 
-    void secondlargest(int arr[],int n){
+    int secondlargest(int arr[],int n){
+     int large=largest(arr,n);
       int secondmax=-1;
          for(int i=0;i<n;i++){
-           if(arr[i]>secondmax && arr[i]=!max){
+           if(arr[i]>secondmax && arr[i]!=large){
              secondmax=arr[i];
            }
-           return secondmax(arr,n);
+           
            
          }
+    return secondmax;
     }
 int main()
 { int n;
@@ -26,8 +30,12 @@ int main()
  int i;
  int arr[n];
  cout<< "enter the elements of the array";
- for(i=0;i<=n;i++){
+ for(i=0;i<n;i++){
    cin>>arr[i];
  }
+ int largestelement= largest(arr, n);
+ int secondlargestelement = secondlargest(arr, n);
+ cout<<"the largest element is"<<largestelement;
+ cout<<"the second largest element is"<<secondlargestelement;
   return 0;
 }
