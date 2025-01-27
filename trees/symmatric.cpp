@@ -1,1 +1,0 @@
-//we have to check if a binary tree is symmatric from both sides or not 
