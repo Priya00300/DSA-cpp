@@ -1,5 +1,24 @@
 #include<iostream>
 using namespace std;
+void sort(int arr[],int n){
+  int temp;
+  for(int i = n-1;i<n;i++){
+    int didswap=0;
+    for(int j=0;j<=i-1;j++){
+      if(arr[j]>arr[j+1])
+        
+        temp = arr[j];
+        arr[j] = arr[j + 1];
+        arr[j + 1] = temp;
+        didswap = 1;
+    }
+    if(didswap==0){
+      break;
+    }
+    
+  }
+  
+}
 
 int binarysearch(int arr[],int n,int key){
   int low =0;
@@ -30,6 +49,11 @@ int main(){
       cin>>arr[i];
       
     }
+  sort(arr,n);
+  cout<<"the sorted array is";
+  for(int i=0;i<n;i++){
+    cout<<arr[i]<<" ";
+  }
   int key;
   cout<<"enter the key";  
   cin>>key;
