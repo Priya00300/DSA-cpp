@@ -2,16 +2,16 @@
 using namespace std;
 void sort(int arr[],int n){
   int temp;
-  for(int i = n-1;i<n;i++){
+  for(int i = n-1;i>0;i--){
     int didswap=0;
     for(int j=0;j<=i-1;j++){
-      if(arr[j]>arr[j+1])
+      if(arr[j]>arr[j+1]){
         
         temp = arr[j];
         arr[j] = arr[j + 1];
         arr[j + 1] = temp;
         didswap = 1;
-    }
+    }}
     if(didswap==0){
       break;
     }
@@ -59,10 +59,10 @@ int main(){
   cin>>key;
   int index = binarysearch(arr,n,key);
   if(index!=-1){
-    cout<<"element found at index"<<index;
+    cout<<"element found at index"<<index<<endl;
   }
   else{
-    cout<<"element not found";
+    cout<<"element not found"<<endl;
   }
 return 0;
 }
