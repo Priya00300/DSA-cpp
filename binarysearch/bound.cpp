@@ -19,10 +19,12 @@ for(int i=n-1;i>0;i--){
       arr[j+1]=temp;
       didswap=1;
     }
-    if(didswap==0) break;
+    
     
   }
+  if(didswap==0) break;
 }
+  
 }
 int lowerbound(int arr[],int n,int target){
   int ans;
