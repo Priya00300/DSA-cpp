@@ -10,3 +10,13 @@
 //O(N)
 //in the inner loop we are starting uit fromwhere the non zero is finised
 //2nd method we can check if it is 0 or not and if it is zero then we will swap it to the next one
+#include<iostream>
+using namespace std;
+void zeroatend(int arr[],int n){
+  for(int i = 0;i<n;i++){
+    int temp;
+    if(arr[i]!=0){
+      temp.add(arr[i]);
+    }
+  })
+}
