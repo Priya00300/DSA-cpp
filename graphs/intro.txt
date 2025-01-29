@@ -1,0 +1,6 @@
+there are two types of graphs directed and undirected 
+they connsist of node and vertices 
+a node can appear only once in  a path
+degree of the node - number of maax edges attached to a node.
+total degree of  a graph = 2 * edges
+indegree= the number of edges coming inside and outdegree the number of edges going ooutside
