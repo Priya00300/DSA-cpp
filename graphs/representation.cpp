@@ -29,3 +29,4 @@ int main(){
   }
   return 0;
 }
+//the space complexity is n2 which is a  lot so we will do adjacent list method 
