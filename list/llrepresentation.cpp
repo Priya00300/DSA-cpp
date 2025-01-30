@@ -25,16 +25,16 @@ using namespace std;
 struct node{
 int data;
 node* next;
-node(int val,node* next1) : data(val), next(next1) {}
+node(int val,node* next1= nullptr) : data(val), next(next1) {}
 };
 
 int main(){
   vector<int> v = {1,2,3,4,5};
-  node* head = new node(v[1],nullptr);
+  node* head = new node(v[0],nullptr);
   node* current =head;
   for(size_t i=1;i<v.size();i++){
     current -> next = new node(v[i]);
-    current = current->next
+    current = current->next;
   }
   cout << "Linked List: ";
   current = head;
