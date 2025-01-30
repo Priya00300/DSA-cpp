@@ -19,16 +19,29 @@
 //Node* y = &n;
 
 #include<iostream>
+#include<vector>
 using namespace std;
 
 struct node{
 int data;
 node* next;
-node(val,next1) : data(val), next(next1) {}
-}
+node(int val,node* next1) : data(val), next(next1) {}
+};
 
 int main(){
-  vector<int> v = [1,2,3,4,5];
-  Noden* head = new Node(arr[0],nullptr);
-  cout<< y;
+  vector<int> v = {1,2,3,4,5};
+  node* head = new node(v[1],nullptr);
+  node* current =head;
+  for(size_t i=1;i<v.size();i++){
+    current -> next = new node(v[i]);
+    current = current->next
+  }
+  cout << "Linked List: ";
+  current = head;
+  while (current != nullptr) {
+      cout << current->data << " ";
+      current = current->next;
+  }
+  cout << endl;
+  return 0;
 }
